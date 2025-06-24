@@ -1,8 +1,8 @@
-I wrote a java program that decides ADFA
-ADFA is a decidable language in theory of computation  
-ADFA = { <D,w> | D is a DFA that accepts the string w }
-in this program we define DFA in a text file whose name is input.txt
-for example look at this image 
+I wrote a java program that decides ADFA.
+ADFA is a decidable language in theory of computation.
+ADFA = { <D,w> | D is a DFA that accepts the string w }.
+in this program we define DFA in a text file whose name is input.txt.
+for example look at this image. 
 
 ![Untitled](https://github.com/user-attachments/assets/f43e1483-7242-46e1-947b-78d7f7fcf5a0)
 
