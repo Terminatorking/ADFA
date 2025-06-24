@@ -9,21 +9,13 @@ for example look at this image
 This is how we define the DFA in the photo in the input.txt file:
 
 states: q0,q1
-
 alphabet: 0,1
-
 start: q0
-
 accept: q0
-
 transitions:
-
 (q0,0,q0)
-
 (q0,1,q1)
-
 (q1,0,q1)
-
 (q1,1,q0)
 
 attention : The DFA must be defined in the input.txt file in this way, and if it is not, an error will occur.
