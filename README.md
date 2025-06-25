@@ -8,7 +8,7 @@ for example look at this image.
 
 This is how we define the DFA in the photo in the input.txt file:
 
-<pre>txt states: q0,q1
+<pre>states: q0,q1
 alphabet: 0,1 
 start: q0 
 accept: q0 
