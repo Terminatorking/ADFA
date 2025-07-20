@@ -6,28 +6,31 @@ import java.util.Map;
 import java.util.Set;
 
 public abstract class Automata {
+
     private AutomataValidator validator;
     private Set<String> states;
-    private Set<String> alphabet;
+    private Set<String> alphabets;
     private Map<String, Map<String, String>> transitions;
     private String startState;
     private Set<String> acceptsStates;
+
+    public abstract boolean acceptInput(String input) ;
+    protected abstract Automata createFromFile(String filename) throws Exception ;
 
     public void setStates(Set<String> states) {
         this.states = states;
     }
 
-    @SuppressWarnings("All")
     public Set<String> getStates() {
         return this.states;
     }
 
-    public void setAlphabet(Set<String> alphabet) {
-        this.alphabet = alphabet;
+    public void setAlphabets(Set<String> alphabets) {
+        this.alphabets = alphabets;
     }
 
-    public Set<String> getAlphabet() {
-        return this.alphabet;
+    public Set<String> getAlphabets() {
+        return this.alphabets;
     }
 
     public Map<String, Map<String, String>> getTransitions() {
@@ -54,20 +57,11 @@ public abstract class Automata {
         this.acceptsStates = acceptsStates;
     }
 
-    public abstract boolean acceptInput(String input);
-
-    public abstract Automata createFromFile(String filename) throws Exception;
-
-
     public String removeAllSpace(String input) {
         return input.replaceAll("\\s", "");
     }
 
-    public void print(Object o) {
-        System.out.println(o.toString());
-    }
-
-    public String skipSpace(LineNumberReader reader) throws IOException {
+    public String skipSpaces(LineNumberReader reader) throws IOException {
         String line;
         do {
             line = reader.readLine();
